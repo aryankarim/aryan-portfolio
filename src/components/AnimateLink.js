@@ -1,5 +1,6 @@
 import { useSpring, animated } from 'react-spring';
 import { useDrag } from '@use-gesture/react';
+import CharacterSpliter from './CharacterSpliter';
 
 export default function AnimateLink({ children }) {
   const [springStyles, springApi] = useSpring(() => ({
@@ -17,7 +18,7 @@ export default function AnimateLink({ children }) {
       {...bindDivLoc()}
       style={{ ...springStyles, touchAction: 'none' }}
     >
-      {children}
+      <CharacterSpliter projectTitle={children} />
     </animated.div>
   );
 }

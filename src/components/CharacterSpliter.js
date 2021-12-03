@@ -1,3 +1,5 @@
-export default function CharacterSpliter() {
-  return <div></div>;
+export default function CharacterSpliter({ projectTitle }) {
+  return [...projectTitle].map((char, index) => (
+    <span key={index}>{char}</span>
+  ));
 }
