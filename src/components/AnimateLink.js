@@ -1,27 +1,19 @@
 import { useSpring, animated } from 'react-spring';
 import { useDrag } from '@use-gesture/react';
 
-export default function AnimateLink({ children, fromX, fromY, duration }) {
-  const springStyles = useSpring({
-    from: { x: fromX, y: fromY },
-    config: { duration: duration },
-    x: window.innerWidth / 2 - 40,
-    y: fromY,
+export default function AnimateLink({ children }) {
+  const [springStyles, springApi] = useSpring(() => ({
+    x: 100,
+    y: 200,
+  }));
+
+  const bindDivLoc = useDrag(({ down, movement: [mx, my] }) => {
+    springApi.start({ x: down ? mx + 100 : 100, y: down ? my + 200 : 200 });
   });
-
-  const bindDivLoc = useDrag(
-    ({ offset }) => {
-      springStyles.x.set(offset[0]);
-      springStyles.y.set(offset[1]);
-    },
-    {
-      from: () => [springStyles.x.get(), springStyles.y.get()],
-    }
-  );
-
+  console.log(children);
   return (
     <animated.div
-      className="text-purple-500 w-20 text-center "
+      className="text-purple-500 w-20 text-center my-8"
       {...bindDivLoc()}
       style={{ ...springStyles, touchAction: 'none' }}
     >
