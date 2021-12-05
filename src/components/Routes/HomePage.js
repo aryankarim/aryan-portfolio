@@ -1,11 +1,11 @@
-import AnimateLink from '../AnimateLink';
+import AnimateProjectTitle from '../AnimateProjectTitle';
 
 export default function HomePage() {
   return (
     <div>
-      <AnimateLink>Lets Work</AnimateLink>
-      <AnimateLink>Chakika</AnimateLink>
-      <AnimateLink>CatDog</AnimateLink>
+      <AnimateProjectTitle>Lets Work</AnimateProjectTitle>
+      <AnimateProjectTitle>Chakika</AnimateProjectTitle>
+      <AnimateProjectTitle>CatDog</AnimateProjectTitle>
     </div>
   );
 }

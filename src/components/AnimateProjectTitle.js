@@ -2,7 +2,7 @@ import { useSpring, animated } from 'react-spring';
 import { useDrag } from '@use-gesture/react';
 import CharacterSpliter from './CharacterSpliter';
 
-export default function AnimateLink({ children }) {
+export default function AnimateProjectTitle({ children }) {
   const [springStyles, springApi] = useSpring(() => ({
     x: 100,
     y: 200,
