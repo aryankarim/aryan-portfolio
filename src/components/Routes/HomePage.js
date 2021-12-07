@@ -8,7 +8,7 @@ export default function HomePage() {
         <AnimateProjectTitle>Chakika</AnimateProjectTitle>
         <AnimateProjectTitle>CatDog</AnimateProjectTitle>
       </div>
-      <div className="flex justify-center items-center col-end-4 bg-gray-600">
+      <div className="flex justify-center items-center col-end-4">
         <div
           className="bg-gray-900 rounded-full"
           style={{ height: "110px", width: "110px" }}

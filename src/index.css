@@ -4,4 +4,5 @@
 
 html {
   background-color: #010020;
+  user-select:none;
 }
