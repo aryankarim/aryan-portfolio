@@ -1,8 +1,8 @@
-import HomePage from './components/Routes/HomePage';
+import HomePage from "./components/Routes/HomePage";
 
 function App() {
   return (
-    <div>
+    <div className="container mx-auto">
       <HomePage />
     </div>
   );
