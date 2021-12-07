@@ -3,7 +3,7 @@ import AnimateProjectTitle from "../AnimateProjectTitle";
 export default function HomePage() {
   return (
     <div className="grid grid-col-3 gap-4 h-full ">
-      <div>
+      <div className="flex flex-col justify-center items-center">
         <AnimateProjectTitle>Lets Work</AnimateProjectTitle>
         <AnimateProjectTitle>Chakika</AnimateProjectTitle>
         <AnimateProjectTitle>CatDog</AnimateProjectTitle>
