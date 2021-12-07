@@ -2,13 +2,18 @@ import AnimateProjectTitle from "../AnimateProjectTitle";
 
 export default function HomePage() {
   return (
-    <div class="grid grid-col-3 gap-4 h-full ">
-      <div className="">
+    <div className="grid grid-col-3 gap-4 h-full ">
+      <div>
         <AnimateProjectTitle>Lets Work</AnimateProjectTitle>
         <AnimateProjectTitle>Chakika</AnimateProjectTitle>
         <AnimateProjectTitle>CatDog</AnimateProjectTitle>
       </div>
-      <div className="col-end-4 bg-red-200">2</div>
+      <div className="flex justify-center items-center col-end-4 bg-gray-600">
+        <div
+          className="bg-gray-900 rounded-full"
+          style={{ height: "110px", width: "110px" }}
+        ></div>
+      </div>
     </div>
   );
 }
