@@ -1,5 +1,7 @@
+import Character from "./Character";
+
 export default function CharacterSpliter({ projectTitle }) {
   return [...projectTitle].map((char, index) => (
-    <span key={index}>{char}</span>
+    <Character key={index} char={char} />
   ));
 }
